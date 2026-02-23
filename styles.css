@@ -1,0 +1,522 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: rgba(72, 24, 117, 0.1) url(imagenes/nubes.png) no-repeat bottom;
+  background-size: 100% auto;
+  background-blend-mode: normal;
+  background-position: bottom;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  /* padding: 0; */
+}
+
+.navbar .left .logo {
+  width: 200px;
+  height: auto;
+}
+
+.navbar .right {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .right a {
+  text-decoration: none;
+  color: rgb(72, 24, 117);
+  font-size: 17px;
+  font-weight: bold;
+  /* text-transform: uppercase; */
+  transition: all 0.2s ease; /* Transición suave (opcional) */
+  padding: 6px;
+  border-style: groove;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: transparent;
+  display: inline-block;
+}
+
+.navbar .right .active,
+.navbar .right a:hover {
+  border-color: rgba(72, 24, 117, 0.1);
+  background-color: rgba(72, 24, 117, 0.1);
+  cursor: pointer;
+}
+
+.principal {
+  text-align: center;
+}
+
+.principal .festivalname {
+  background: linear-gradient(45deg, #491e55, #65388e, #d4a0c3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 1rem;
+  font-family: "Arimo", "DM Sans";
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.principal .info {
+  margin-bottom: 2rem;
+}
+
+.principal .info .fecha,
+.principal .info .lugar {
+  color: #481875;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  font-style: italic;
+}
+
+.descripcion {
+  background: linear-gradient(45deg, #491e55, #65388e, #d4a0c3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.footer {
+  /* padding: rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer .enlaces {
+  margin: 1rem auto;
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .enlaces a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  display: inline-block; /* Añade esto */
+  transition: transform 0.2s ease; /* Transición suave (opcional) */
+}
+
+.footer .enlaces a:hover {
+  cursor: pointer;
+  color: rgb(162, 88, 162);
+  transform: scale(1.1); /* Aumenta el tamaño sin afectar el layout */
+  display: inline-block; /* Necesario para que transform funcione bien */
+}
+
+.footer .copyright {
+  margin: 1rem auto;
+}
+
+.lineup {
+  display: grid;
+  grid-template-areas:
+    "art1 art2 art3"
+    "art4 art5 art6";
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  grid-gap: 1rem;
+}
+
+.lineup .artista {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#art1 {
+  grid-area: art1;
+}
+
+#art2 {
+  grid-area: art2;
+}
+
+#art3 {
+  grid-area: art3;
+}
+
+#art4 {
+  grid-area: art4;
+}
+
+#art5 {
+  grid-area: art5;
+}
+
+#art6 {
+  grid-area: art6;
+}
+
+.lineup .artista a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.lineup .artista img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.lineup .artista .superpuesto {
+  background-color: rgba(72, 24, 117, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  margin: 0;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 0.3vw;
+  opacity: 0;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.lineup .artista:hover .superpuesto {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.abonoscontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.abonoscontainer .abono {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 17rem;
+  background-color: rgba(72, 24, 117, 0.1);
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: black;
+  transition: transform 0.15s ease;
+}
+
+.abonoscontainer .abono .tipo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* .abonoscontainer .abono .precio-btn-wrapper{
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+} */
+
+.abonoscontainer .abono .precio {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 4px rgba(168, 107, 225, 0.8);
+}
+
+.abonoscontainer .abono .ventajas {
+  border-color: #65388e;
+  border-radius: 15px;
+}
+
+.abonoscontainer .abono .ventajas .cursiva {
+  font-style: italic;
+}
+
+.abonoscontainer .abono .ventajas ul {
+  list-style: none;
+  margin: 0 0.7rem;
+}
+
+.abonoscontainer .abono button {
+  color: white;
+  border: none;
+  background-color: rgba(72, 24, 117, 0.4);
+  padding: 0.7rem;
+  margin-bottom: 0;
+  transition: all 0.2s ease;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.abonoscontainer .abono button:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+  color: rgba(101, 56, 142, 0.8);
+}
+
+/* Selector de cantidad */
+.cantidad-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.cantidad-selector .btn-menos,
+.cantidad-selector .btn-mas {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid rgba(72, 24, 117, 0.4);
+  background: transparent;
+  color: rgb(72, 24, 117);
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  padding: 0;
+  margin: 0;
+  transform: none;
+}
+
+.cantidad-selector .btn-menos:hover,
+.cantidad-selector .btn-mas:hover {
+  background-color: rgba(72, 24, 117, 0.15);
+  transform: none;
+}
+
+.cantidad-selector .cantidad-num {
+  font-size: 1.2rem;
+  font-weight: bold;
+  min-width: 1.5rem;
+  text-align: center;
+  color: rgb(72, 24, 117);
+}
+
+/* Modal overlay */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  backdrop-filter: blur(3px);
+}
+
+.modal.oculto {
+  display: none;
+}
+
+.modal-contenido {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 420px;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(72, 24, 117, 0.3);
+}
+
+.modal-cerrar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+  line-height: 1;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.modal-cerrar:hover {
+  color: rgb(72, 24, 117);
+  transform: none;
+}
+
+.modal-contenido h2 {
+  font-size: 1.5rem;
+  color: rgb(72, 24, 117);
+  margin-bottom: 0.3rem;
+}
+
+.modal-resumen {
+  font-size: 1rem;
+  color: #65388e;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+}
+
+/* Formulario */
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-grupo label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: rgb(72, 24, 117);
+  margin-bottom: 0.3rem;
+}
+
+.form-grupo input {
+  border: 2px solid rgba(72, 24, 117, 0.2);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  font-family: "DM Sans", sans-serif;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-grupo input:focus {
+  border-color: rgba(72, 24, 117, 0.6);
+}
+
+.error-msg {
+  color: #c0392b;
+  font-size: 0.78rem;
+  margin-top: 0.25rem;
+  min-height: 1rem;
+}
+
+.btn-confirmar {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: rgba(72, 24, 117, 0.8);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+  font-family: "DM Sans", sans-serif;
+}
+
+.btn-confirmar:hover {
+  background-color: rgb(72, 24, 117);
+  transform: translateY(-2px);
+}
+
+/* Mensaje de éxito */
+.exito-msg {
+  text-align: center;
+  padding: 1rem 0;
+  color: rgb(72, 24, 117);
+}
+
+.exito-msg i {
+  font-size: 3rem;
+  color: #27ae60;
+  margin-bottom: 1rem;
+}
+
+.exito-msg p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.exito-msg button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  background-color: rgba(72, 24, 117, 0.15);
+  color: rgb(72, 24, 117);
+  border: 2px solid rgba(72, 24, 117, 0.3);
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  transition: all 0.2s ease;
+}
+
+.exito-msg button:hover {
+  background-color: rgba(72, 24, 117, 0.25);
+}
+
+/* Responsive - Media Queries Teléfono */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar .right {
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+  }
+
+  .principal .info {
+    margin: 2rem auto;
+  }
+
+  .descripcion {
+    width: 90%;
+  }
+
+  .footer .enlaces {
+    justify-content: space-evenly;
+  }
+
+  .footer .copyright {
+    width: 90%;
+    text-align: center;
+  }
+
+  .lineup {
+    grid-template-areas:
+      "art1"
+      "art2"
+      "art3"
+      "art4"
+      "art5"
+      "art6";
+    grid-template-columns: 1fr;
+    width: 80%;
+    grid-gap: 3rem;
+    margin: 0 auto;
+  }
+
+  .abonoscontainer {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* arreglar el footer para que se quede siempre abajo y algun detalle más */
