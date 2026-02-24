@@ -1,128 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Festival</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <!-- Encabezado -->
-        <header class="navbar">
-            <div class="left">
-                <img src="imagenes/logo.png" class="logo" alt="Logo Elcielo">
-            </div>
-            <nav class="right">
-                <a href="index.html">Inicio</a>
-                <a href="lineup.html">Lineup</a>
-                <a href="abonos.html" class="active">Abonos</a>
-            </nav>
-        </header>
-
+      <!-- Encabezado -->
+      <header class="navbar">
+        <div class="left">
+          <img src="imagenes/logo.png" class="logo" alt="Logo Elcielo" />
+        </div>
+        <nav class="right">
+          <a href="index.html">Inicio</a>
+          <a href="lineup.html">Lineup</a>
+          <a href="abonos.html" class="active">Abonos</a>
+        </nav>
+      </header>
+      <div class="subcontainer">
         <!-- Información tickets -->
         <div class="abonoscontainer">
-            <div class="abono" id="general">
-                <p class="tipo">Abono general</p>
-                <p class="precio">74.95€</p>
-                <!-- Selector de cantidad -->
-                <div class="cantidad-selector">
-                    <button type="button" class="btn-menos">−</button>
-                    <span class="cantidad-num">1</span>
-                    <button type="button" class="btn-mas">+</button>
-                </div>
-                <button type="button" class="btn-comprar">Comprar</button>
+          <div class="abono" id="general">
+            <p class="tipo">Abono general</p>
+            <p class="precio">74.95€</p>
+            <!-- Selector de cantidad -->
+            <div class="cantidad-selector">
+              <button type="button" class="btn-menos">−</button>
+              <span class="cantidad-num">1</span>
+              <button type="button" class="btn-mas">+</button>
             </div>
+            <button type="button" class="btn-comprar">Comprar</button>
+          </div>
 
-            <div class="abono" id="vip">
-                <p class="tipo">Abono VIP</p>
-                <div class="ventajas">
-                    <ul>
-                        <li>Acceso a <span class="cursiva">front row</span> preferente</li>
-                        <li>Bono 3 bebidas por día</li>
-                        <li><span class="cursiva">Meet and greet</span> con el artista que elijas</li>
-                    </ul>
-                </div>
-                <p class="precio">134.95€</p>
-                <!-- Selector de cantidad -->
-                <div class="cantidad-selector">
-                    <button type="button" class="btn-menos">−</button>
-                    <span class="cantidad-num">1</span>
-                    <button type="button" class="btn-mas">+</button>
-                </div>
-                <button type="button" class="btn-comprar">Comprar</button>
+          <div class="abono" id="vip">
+            <p class="tipo">Abono VIP</p>
+            <div class="ventajas">
+              <ul>
+                <li>
+                  Acceso a <span class="cursiva">front row</span> preferente
+                </li>
+                <li>Bono 3 bebidas por día</li>
+                <li>
+                  <span class="cursiva">Meet and greet</span> con el artista que
+                  elijas
+                </li>
+              </ul>
             </div>
+            <p class="precio">134.95€</p>
+            <!-- Selector de cantidad -->
+            <div class="cantidad-selector">
+              <button type="button" class="btn-menos">−</button>
+              <span class="cantidad-num">1</span>
+              <button type="button" class="btn-mas">+</button>
+            </div>
+            <button type="button" class="btn-comprar">Comprar</button>
+          </div>
         </div>
 
         <!-- Modal de compra -->
         <div id="modal-compra" class="modal oculto">
-            <div class="modal-contenido">
-                <button id="btn-cerrar-modal" class="modal-cerrar">&times;</button>
-                <h2 id="modal-titulo">Comprar Abono</h2>
-                <p id="modal-resumen" class="modal-resumen"></p>
+          <div class="modal-contenido">
+            <button id="btn-cerrar-modal" class="modal-cerrar">&times;</button>
+            <h2 id="modal-titulo">Comprar Abono</h2>
+            <p id="modal-resumen" class="modal-resumen"></p>
 
-                <!-- Formulario -->
-                <form id="form-compra">
-                    <input type="hidden" id="form-tipo">
-                    <input type="hidden" id="form-cantidad">
+            <!-- Formulario -->
+            <form id="form-compra">
+              <input type="hidden" id="form-tipo" />
+              <input type="hidden" id="form-cantidad" />
 
-                    <div class="form-grupo">
-                        <label for="input-nombre">Nombre completo</label>
-                        <input type="text" id="input-nombre" placeholder="Tu nombre y apellidos">
-                        <span class="error-msg" id="error-nombre"></span>
-                    </div>
+              <div class="form-grupo">
+                <label for="input-nombre">Nombre completo</label>
+                <input
+                  type="text"
+                  id="input-nombre"
+                  placeholder="Tu nombre y apellidos"
+                />
+                <span class="error-msg" id="error-nombre"></span>
+              </div>
 
-                    <div class="form-grupo">
-                        <label for="input-email">Email</label>
-                        <input type="email" id="input-email" placeholder="tu@email.com">
-                        <span class="error-msg" id="error-email"></span>
-                    </div>
+              <div class="form-grupo">
+                <label for="input-email">Email</label>
+                <input
+                  type="email"
+                  id="input-email"
+                  placeholder="tu@email.com"
+                />
+                <span class="error-msg" id="error-email"></span>
+              </div>
 
-                    <div class="form-grupo">
-                        <label for="input-telefono">Teléfono</label>
-                        <input type="tel" id="input-telefono" placeholder="612 345 678">
-                        <span class="error-msg" id="error-telefono"></span>
-                    </div>
+              <div class="form-grupo">
+                <label for="input-telefono">Teléfono</label>
+                <input
+                  type="tel"
+                  id="input-telefono"
+                  placeholder="612 345 678"
+                />
+                <span class="error-msg" id="error-telefono"></span>
+              </div>
 
-                    <button type="submit" class="btn-confirmar">Confirmar compra</button>
-                </form>
+              <button type="submit" class="btn-confirmar">
+                Confirmar compra
+              </button>
+            </form>
 
-                <!-- Mensaje de éxito -->
-                <div id="form-exito" class="oculto exito-msg">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <p>¡Compra realizada con éxito!</p>
-                    <p>Recibirás la confirmación en tu email.</p>
-                    <button type="button" onclick="cerrarModal()">Cerrar</button>
-                </div>
+            <!-- Mensaje de éxito -->
+            <div id="form-exito" class="oculto exito-msg">
+              <i class="fa-solid fa-circle-check"></i>
+              <p>¡Compra realizada con éxito!</p>
+              <p>Recibirás la confirmación en tu email.</p>
+              <button type="button" onclick="cerrarModal()">Cerrar</button>
             </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Pie de página -->
-        <footer class="footer">
-            <div class="enlaces">
-                <a href="#instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="#x">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
-                <a href="#tiktok">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
-            </div>
-            <div class="copyright">
-                <p>Festival Elcielo&copy; 2026, Todos los derechos reservados</p>
-            </div>
-        </footer>
+      <!-- Pie de página -->
+      <footer class="footer">
+        <div class="enlaces">
+          <a href="#instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#x">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="#tiktok">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </div>
+        <div class="copyright">
+          <p>Festival Elcielo&copy; 2026, Todos los derechos reservados</p>
+        </div>
+      </footer>
     </div>
 
     <script src="abonos.js"></script>
-</body>
+  </body>
 </html>
