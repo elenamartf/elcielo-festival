@@ -339,11 +339,16 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 100;
+  -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
 }
 
-.modal.oculto {
+.modal .oculto {
   display: none;
+  background: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: blur(3px);
+  pointer-events: none;
 }
 
 .modal-contenido {
