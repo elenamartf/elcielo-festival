@@ -55,9 +55,6 @@ function abrirModal(tipo) {
 // Cierra el modal
 function cerrarModal() {
   document.getElementById("modal-compra").classList.add("oculto");
-  document.getElementById("modal-contenido").classList.add("oculto");
-  document.getElementById("modal-titulo").classList.add("oculto");
-  document.getElementById("form-exito").classList.add("oculto");
   document.body.style.overflow = "";
 }
 

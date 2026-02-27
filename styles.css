@@ -298,8 +298,8 @@ body {
 
 .cantidad-selector .btn-menos,
 .cantidad-selector .btn-mas {
-  width: 2rem;
-  height: 2rem;
+  width: 1.6rem;
+  height: 1.6rem;
   border-radius: 50%;
   border: 2px solid rgba(72, 24, 117, 0.4);
   background: transparent;
@@ -343,12 +343,9 @@ body {
   backdrop-filter: blur(3px);
 }
 
-.modal .oculto {
+.modal .oculto,
+.modal.oculto {
   display: none;
-  background: transparent;
-  -webkit-backdrop-filter: none;
-  backdrop-filter: blur(3px);
-  pointer-events: none;
 }
 
 .modal-contenido {
@@ -529,8 +526,81 @@ body {
     margin: 0 auto;
   }
 
+  .lineup .artista .superpuesto {
+    opacity: 1;
+    background: linear-gradient(
+      to top,
+      rgba(30, 0, 50, 0.75) 0%,
+      transparent 50%
+    );
+    align-items: flex-end;
+    padding-bottom: 0.8rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.2vw;
+  }
+
   .abonoscontainer {
     flex-direction: column;
     justify-content: center;
+  }
+}
+
+/* Responsive - Media Queries Tablet */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .navbar .right {
+    width: 260px;
+  }
+
+  .navbar .right a {
+    font-size: 16px;
+  }
+
+  .lineup {
+    grid-template-areas:
+      "art1 art2"
+      "art3 art4"
+      "art5 art6";
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+
+  .lineup .artista .superpuesto {
+    opacity: 1;
+    background: linear-gradient(
+      to top,
+      rgba(30, 0, 50, 0.75) 0%,
+      transparent 50%
+    );
+    align-items: flex-end;
+    padding-bottom: 0.8rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.2vw;
+  }
+
+  .abonoscontainer .abono {
+    height: auto;
+    padding: 1.5rem 1.5rem;
+    gap: 0.8rem;
+  }
+
+  .abonoscontainer .abono .tipo {
+    font-size: 1.3rem;
+  }
+
+  .abonoscontainer .abono .precio {
+    font-size: 1.2rem;
+  }
+
+  .abonoscontainer .abono .ventajas ul li {
+    font-size: 0.85rem;
+  }
+
+  .abonoscontainer .abono button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .descripcion {
+    width: 70%;
   }
 }
